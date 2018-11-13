@@ -92,10 +92,11 @@ extension FormController {
     
     private func addSubmitButton() {
         view.addSubview(submitButton)
+        submitButton.backgroundColor = .blue
         submitButton.setTitle("Submit", for: .normal)
         
         submitButton.snp.makeConstraints { make in
-            make.top.equalTo(stackview.snp.bottom)
+            make.top.equalTo(stackview.snp.bottom).offset(20.0)
             make.centerX.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(20.0)
         }
